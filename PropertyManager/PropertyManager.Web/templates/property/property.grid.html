@@ -1,0 +1,29 @@
+﻿<table class="table table-condensed table-responsive">
+    <thead>
+        <tr>
+            <th style="color:#ffffff; font-weight:bold; font-size:26px;">Property Name</th>
+            <th style="color:#ffffff; font-weight:bold; font-size:26px;">Address 1</th>
+            <th style="color:#ffffff; font-weight:bold; font-size:26px;">City</th>
+            <th style="color:#ffffff; font-weight:bold; font-size:26px;">State</th>
+            <th style="color:#ffffff; font-weight:bold; font-size:26px;">Postcode</th>
+            <th style="color:#ffffff; font-weight:bold; font-size:26px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="property in properties" style="font: #ffffff">
+            <td style="color: #ffffff; font-weight:bold;">{{property.PropertyName}}</td>
+            <td style="color: #ffffff; font-weight:bold;">{{property.Address.Address1}}</td>
+            <td style="color: #ffffff; font-weight:bold;">{{property.Address.City}}</td>
+            <td style="color: #ffffff; font-weight:bold;">{{property.Address.State}}</td>
+            <td style="color: #ffffff; font-weight:bold;">{{property.Address.PostCode}}</td>
+            <td>
+                <a class="btn btn-primary" ng-href="#/property/detail/{{property.PropertyId}}">
+                    Edit
+                </a>
+                <a class="btn btn-danger">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
